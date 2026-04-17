@@ -15,7 +15,8 @@ The **Neural Fit Challenge** is an educational game designed to build an intuiti
    ```bash
    pip install torch matplotlib numpy
 2. Start the Quest: Run today's puzzle from the dailypuzzles folder:
-    python dailypuzzles/2026_04_17_mlp.py
+   ```bash
+    python 2026_04_17_mlp.py
 3.Configure Your Gear: When prompted, input your parameters:
 
   Nodes/Layers: Defines the model's complexity (brainpower).
