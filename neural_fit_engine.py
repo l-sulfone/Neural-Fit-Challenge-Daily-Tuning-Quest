@@ -73,7 +73,7 @@ def run_ml_challenge(date_stamp, challenge_name, target_function):
     # 5. Scoring System
     final_score = 0
     if success:
-        complexity_penalty = nodes * layers * 2
+        complexity_penalty = nodes * layers * 10
         step_penalty = step * 0.5
         final_score = int(max(100, 10000 - complexity_penalty - step_penalty))
         print(f"🎊 VICTORY! Score: {final_score}")
@@ -93,7 +93,7 @@ def run_ml_challenge(date_stamp, challenge_name, target_function):
     ax2.axhline(y=0.001, color='g', linestyle='--')
     ax2.set_title("Training Loss History")
     
-    result_text = f"SCORE: {final_score if success else 'FAILED'}\nSteps: {step}"
+    result_text = f"Data: {date_stamp}\nSCORE: {final_score if success else 'FAILED'}\nSteps: {step}"
     fig.text(0.5, 0.02, result_text, ha='center', fontsize=14, fontweight='bold', 
              bbox=dict(facecolor='white', alpha=0.8, edgecolor='black'))
     
